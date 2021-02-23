@@ -21,7 +21,7 @@ class App extends Component {
 }
 export default GoogleApiWrapper({
     apiKey: 'AIzaSyD0KNyQSG2n8Oo8vi9WE82KFZp9zKCEItg'
-})(MapContainer);
+})(Maps);
 
 const mapStyles = {
     width: '100%',
