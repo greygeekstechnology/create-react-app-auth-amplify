@@ -28,4 +28,4 @@ const mapStyles = {
     height: '100%',
 };
 
-export default withAuthenticator(App, true);
+//export default withAuthenticator(App, true);
