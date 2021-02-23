@@ -4,29 +4,28 @@ import './App.css';
 import { withAuthenticator } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from './aws-exports';
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 Amplify.configure(aws_exports);
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      return (
+          <Map
+              google={this.props.google}
+              zoom={8}
+              style={mapStyles}
+              initialCenter={{ lat: 47.444, lng: -122.176 }}
+          />
+      );
   }
 }
+export default GoogleApiWrapper({
+    apiKey: 'AIzaSyD0KNyQSG2n8Oo8vi9WE82KFZp9zKCEItg'
+})(MapContainer);
+
+const mapStyles = {
+    width: '100%',
+    height: '100%',
+};
 
 export default withAuthenticator(App, true);
