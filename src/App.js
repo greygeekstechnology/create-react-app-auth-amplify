@@ -35,7 +35,7 @@ export default GoogleApiWrapper({
 
 const mapStyles = {
     width: '100%',
-    height: '100%',
+    height: '75%',
 };
 
 //export default withAuthenticator(App, true);
