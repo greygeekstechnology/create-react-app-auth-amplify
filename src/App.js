@@ -10,12 +10,22 @@ Amplify.configure(aws_exports);
 class App extends Component {
   render() {
       return (
-          <Map
-              google={this.props.google}
-              zoom={8}
-              style={mapStyles}
-              initialCenter={{ lat: 47.444, lng: -122.176 }} 
-          />
+          <div className="shopping-list">
+              <Map
+                  google={this.props.google}
+                  zoom={8}
+                  style={mapStyles}
+                  initialCenter={{ lat: 47.444, lng: -122.176 }}
+              />
+        <h1>Shopping List for</h1>
+        <ul>
+          <li>Instagram</li>
+          <li>WhatsApp</li>
+          <li>Oculus</li>
+        </ul>
+      </div>
+          
+
       );
   }
 }
